@@ -65,6 +65,8 @@ console.log(3>=3) //true
 
 //! OPERADORES UNARIOS
 typeof(4)
+console.log(typeof(4));
+
 //?incremento
 let num=4
 console.log(num++) //4
