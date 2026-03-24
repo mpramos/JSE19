@@ -125,4 +125,3 @@ console.log(typeof(3) === "number");
 console.log(typeof(true) === "boolean");
 
 
-
