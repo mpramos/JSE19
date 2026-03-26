@@ -126,3 +126,12 @@ switch (dia) {
         console.log('error')
             break;
         }
+
+
+for (let numeros = 0; numeros <=90 ; numeros+=10) {
+    console.log(numeros);
+}
+for (let numero = 90; numero >=0; numero-=10) {
+    console.log(numero);
+    
+}
