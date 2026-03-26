@@ -24,9 +24,6 @@ if (edad >= 18) {
     
 }
 
-
-
-
 if (true === true) {
     console.log('se cumple')
 }else{
@@ -56,3 +53,76 @@ if(-1223){
     console.log('se cumple')
 }else{console.log('no se cumple')}
 
+
+let esAdmin = false
+let esModerador= false
+
+if (esAdmin || esModerador) {
+    console.log('tiene acceso')
+} else {
+    console.log('acceso denegado')
+}
+
+let nota = 65
+if (nota >= 51 && nota <=100) {
+    console.log('aprobado')
+} else {
+    console.log('reprobado')
+}
+
+let edad1 = 17
+let permiso = true
+
+if (edad1 >=18 || (edad1 <18 && permiso)) {
+    console.log('Puedes ingresar')
+}else{
+    console.log('No puedes ingresar')
+
+}
+
+let usuario = "admin"
+let password = "12345"
+
+if (usuario === "admin" && password === "1234") {
+    console.log('Login correcto');
+} else {
+    console.log('Login incorrecto');
+}
+
+
+let diaSemana = "sabado"
+if (diaSemana === "lunes") {
+    console.log('Hoy es lunes')
+}else if(diaSemana === "martes"){
+    console.log('Hoy es martes')
+}else if(diaSemana === "miercoles"){
+    console.log('Hoy es miercoles')
+}else if(diaSemana === "jueves"){
+    console.log('Hoy es Jueves')
+}else if(diaSemana === "viernes"){
+    console.log('Hoy es viernes')
+}else {
+    console.log('error')
+}
+
+let dia = `viernes`
+switch (dia) {
+    case 'lunes':
+        console.log('Hoy es lunes')
+        break;
+    case 'martes':
+        console.log('Hoy es martes')
+        break;
+    case 'miercoles':
+        console.log('Hoy es miercoles')
+        break;
+    case 'jueves':
+        console.log('Hoy es Jueves')
+        break;
+    case 'viernes':
+        console.log('Hoy es Viernes')
+        break;
+    default:
+        console.log('error')
+            break;
+        }
