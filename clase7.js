@@ -135,3 +135,86 @@ for (let numero = 90; numero >=0; numero-=10) {
     console.log(numero);
     
 }
+let numero = 90
+while (numero>=0) {
+    console.log(numero)
+    numero-=10
+}
+let num=90
+do {
+    console.log(num);
+    num-=10
+} while (num>=0);
+
+
+// array []
+//objet0 {}
+let comidas = ['🍿','🧀','🍔','🧇','🥞','🥓']
+console.log(comidas);
+let primer =comidas[5] //5
+console.log(primer);
+
+let tamaño = comidas.length //6-1 = 5
+console.log(tamaño);
+for (let posicion = 0; posicion <= comidas.length-1 ; posicion++) {
+    console.log(comidas[posicion]);
+}
+let letras = ['a','b','c','d']
+for (const letra of letras) {
+    console.log(letra);
+    
+}
+
+let usuario1 = {
+    nombre :'juan',
+    edad: 45,
+    telefono :7454545
+}
+console.log(usuario1.nombre);
+console.log(usuario1['nombre']);
+
+for (const key in usuario1) {
+    console.log(`La clave es ${key} : ${usuario1[key]}`);
+}
+
+for (let i = 0; i <=8; i++) {
+    if (i === 5) {
+        break
+    }
+    console.log(i);
+}
+
+for (let i = 0; i < 10; i++) {
+    if (i == 3) {
+        continue;
+    }
+    console.log(i);
+}
+
+
+//!FUNCIONES
+function suma(a,b) {
+    return a+b
+}
+console.log(suma(3,4))
+
+let suma = (a,b)=>a+b
+console.log(suma(4,5));
+
+let resta =(a=3,b=1)=> a-b
+console.log(resta());
+console.log(resta(8,4));
+
+let calculadora = (a,b) => {
+    if (!(typeof a === 'number' && typeof b === 'number')) {
+        return 'Tus parametros son incorrectos'
+    } 
+    let suma = a + b
+    let resta = a - b
+    let mult = a * b
+    return {suma:suma,resta:resta,mult:mult}
+}
+console.log(calculadora(8,1));
+
+
+
