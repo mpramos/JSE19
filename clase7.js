@@ -105,23 +105,23 @@ if (diaSemana === "lunes") {
     console.log('error')
 }
 
-let dia = `viernes`
+let dia = `martes`
 switch (dia) {
     case 'lunes':
         console.log('Hoy es lunes')
-        break;
+        break
     case 'martes':
         console.log('Hoy es martes')
-        break;
+        break
     case 'miercoles':
         console.log('Hoy es miercoles')
-        break;
+        break
     case 'jueves':
         console.log('Hoy es Jueves')
-        break;
+        break
     case 'viernes':
         console.log('Hoy es Viernes')
-        break;
+      break
     default:
         console.log('error')
             break;
