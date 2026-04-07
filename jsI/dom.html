@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formPersonales {
+         background-color: rgb(198, 130, 46);
+         border:1px solid black;
+         padding: 8px;
+         margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="encabezado">Formulario</h1>
+    <p id="parrafo"></p>
+    <div>
+        <input id="InputNombre" type="text" placeholder="Escriba su nombre">
+        <button onclick="formEnviarNombre()">enviar</button>
+        <input id="InputEdad" type="number" placeholder="Escriba su edad">
+        <button onclick="formEnviarEdad()">enviar</button>
+    </div>
+    <div>
+        <p>hola</p>
+    </div>
+     <div>
+        
+     </div>   
+     <div>
+
+     </div>   
+     <div>
+
+     </div>   
+     <div>
+
+     </div>   
+     <div>
+
+     </div>   
+     <div>
+
+     </div>   
+     <div>
+
+     </div>   
+     <div>
+
+     </div>   
+    <script>
+        let p= document.getElementById('parrafo')
+        let h1 = document.getElementById('encabezado')
+        let div = document.getElementsByTagName('div')
+        let inputNombre = document.getElementById('InputNombre')
+        let InputEdad = document.getElementById('InputEdad')
+        let input = document.getElementsByTagName('input')
+        console.log(div)
+        console.log('h1',h1);
+        console.log('p',p);
+        for (let i = 0; i < div.length; i++) {
+            div[i].classList.add('formPersonales')
+        }
+        let formEnviarNombre =()=>{
+            // for (let i = 0; i < input.length; i++) {
+            //     alert(input[i].value)
+            // }
+            // alert(input[0].value)
+            p.textContent = 'Tu nombre es:' + inputNombre.value
+            // alert(inputNombre.value);
+            
+        }
+        let formEnviarEdad =()=>{
+            // alert(InputEdad.value)
+            p.textContent = 'Tu edad es: ' +InputEdad.value
+        }
+    </script>
+</body>
+</html>
