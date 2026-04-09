@@ -1,0 +1,2 @@
+export -> saca algo de un archivo
+import -> lo usas en otro archivo
