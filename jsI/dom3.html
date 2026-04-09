@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: monospace;
+        }
+        div{
+            margin: 35px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario Simple</h1>
+    <div>
+        <input type="text" id="texto" placeholder="Escribe tu nombre">
+        <input type="number" id="textito" placeholder="Escribe tu edad">
+        <button id="btn">enviar</button>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum quidem quae laboriosam dolor accusamus. Nulla reiciendis cupiditate eius amet consequuntur repudiandae perferendis quo placeat quam, modi accusamus quisquam voluptatibus tenetur!</p>
+    <p id="resultado"></p>
+    <script>
+        const input1 = document.getElementById('texto')
+        const input2 = document.getElementById('textito')
+        const p = document.getElementById("resultado")
+        const button =document.getElementById('btn')
+        input1.addEventListener('dblclick',()=>{return input1.value = ""})
+        input2.addEventListener('dblclick',()=>{return input2.value = ""})
+        button.addEventListener('click',()=>{
+            const nombre = input1.value
+            const edad = input2.value
+            if (nombre === "" || edad === "") {
+                p.textContent = "Por favor completa todos los campos"
+                p.style.color = "red"
+                p.style.fontWeight = "bold"
+                p.style.fontSize ="16px"
+            } else {
+                p.textContent = `Hola ${nombre}, tu edad es ${edad} años`
+                p.style.color = "green"
+                p.style.fontSize ="16px"
+                p.style.fontWeight = "bold"
+            }
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-family: system-ui;">
+    <h1 >Formulario</h1>
+    <!-- <form style="border: 2px solid rgba(0, 0, 0, 0.401); display: flex; flex-direction: column;gap: 10px; padding: 10px;" id="miFormulario"> -->
+    <form id="miFormulario">
+        <input id="inputI" type="text" placeholder="Nombre">
+        <input id="edad" type="text" placeholder="Edad">
+        <button type="submit">Enviar</button>
+    </form>
+    <p></p>
+    <script>
+        const form = document.querySelector('#miFormulario')
+        const inputNombre = document.querySelector('#inputI')
+        const inputEdad = document.querySelector('#edad')
+        const p = document.querySelector('p')
+        form.style.border = "2px solid rgba(0, 0, 0, 0.401)"
+        form.style.display = "flex"
+        form.style.flexDirection = "column"
+        form.style.gap = "10px"
+        form.style.padding = "20px"
+        form.style.backgroundColor = "rgba(0, 0, 0, 0.401)"
+        
+        form.addEventListener('submit',(event)=>{
+            event.preventDefault()// evita recarga de la pagina
+            const nombre = inputNombre.value
+            const edad = inputEdad.value
+            let estaCompletado = false
+            if (nombre === "" || edad === "") {
+                estaCompletado= false
+                p.textContent = "Debes ingresar todos los datos"
+                p.style.fontWeight = "bold"
+                p.style.color = estaCompletado===true ? "green" : "red" 
+            } else{
+                estaCompletado = true
+                p.style.fontWeight = "bold"
+                p.textContent = `Los datos fueron enviados correctamente, Nombre ${nombre.toUpperCase()} y la Edad ${edad}`
+                p.style.color = estaCompletado===true ? "green" : "red" 
+            }
+        })
+       
+    </script>
+</body>
+</html>

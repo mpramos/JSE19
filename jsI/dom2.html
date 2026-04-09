@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input onclick="darClick()" type="text" id="nombre" placeholder="Escriba tu nombre">
+    <button id="btnMostrar" onclick="darClick()">Enviar</button>
+    <p id="resultado"></p>
+    <script>
+        const input =document.getElementById("nombre")
+        const boton = document.getElementById("btnMostrar")
+        const resultado = document.getElementById("resultado")
+        const darClick =()=>{
+            console.log('algo')
+            resultado.textContent = "Hola " + input.value
+        }
+
+
+
+    </script>
+</body>
+</html>
